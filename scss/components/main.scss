@@ -1,0 +1,44 @@
+@import '../modules/variable.scss';
+@import '../modules/classes.scss';
+@import '../modules/mixnis.scss';
+
+section {
+    h1{
+        @extend %h1-title;
+    }  
+    .block {
+       @extend %container;
+       @include display (flex);
+       @include d-flex(space-between,center);
+       @media sreen and (max-width : 1024px) {
+        @include d-flex(center,center);
+       }
+       @media sreen and (max-width : 480px) {
+        @include d-flex(space-around,flex-start);
+       }
+        .box{
+            @include border(21px);
+            height: $size-100;
+            width: $size-100;
+            background: $secodary-color;
+            margin: $margin-size01;
+            &:last-child {
+                width :$size-200
+            }
+            &:hover {
+                background: $action-color;
+            }
+        } 
+    }
+}
+
+.section2 {
+    @extend %flex;
+    @include d-flex(center,flex-end);
+    .block2 {
+        height: $size-200;
+        width: $size-200;
+        background: $action-color;
+        margin:$margin-size01;
+    }
+}

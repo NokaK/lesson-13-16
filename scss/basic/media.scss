@@ -1,0 +1,12 @@
+@import '../modules/mixnis.scss';
+
+
+@media screen and (max-width:1024px) {
+    section {
+        .block {
+            @include flex (none);
+        }
+    }
+}
+
+

@@ -1,0 +1,23 @@
+@mixin d-flex ($horizontal,$vertical){
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+@mixin display ($display-property){
+    display: $display-property;
+}
+
+@mixin border ($size){
+    $color : inherit;
+    $type : inherit;
+    @if $size <= 10 {
+        $color : red;
+        $type : solid;
+    }@else if $size == 20 {
+        $color :  green;
+        $type : dotted;
+    }@else {
+        $color : blue;
+        $type : dashed ;
+    }
+    border : $size $type $color
+}
